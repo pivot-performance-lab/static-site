@@ -1,0 +1,49 @@
+---
+title: Enterprise Pivot
+layout: default
+bodyClass: page-home
+---
+
+<div class="intro pb-4">
+  <div class="container">
+    <h1>Enterprise Pivot.</h1>
+    <h2>Empowering civic action</h2>
+    <p>Enterprise Pivot helps to sustain strengthen and scale the values of CSO.</p>
+  </div>
+</div>
+
+<div class="container pt-2">
+  <div class="call">
+    <div class="call-box-top">
+      <div class="call-email"><strong>Email: </strong>
+        <a href="mailto:{{ site.data.contact.email }}">
+          {{ site.data.contact.email }}
+        </a>
+      </div>
+    </div>
+    <div class="call-box-bottom">
+      <a href="{{site.baseurl}}/contact" class="button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-8 pt-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <h2 class="title-3 text-dark mb-3">Our Vision</h2>
+    </div>
+    {% for vision in site.vision %}
+    <div class="col-12 col-md-8 mb-1">
+      <div class="service service-summary">
+        <div class="service-content">
+          <h2 class="service-title">
+            <a href="{{site.baseurl}}{{ service.url }}">{{ vision.title }}</a>
+          </h2>
+          {{ vision.content | markdownify | strip_html }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
